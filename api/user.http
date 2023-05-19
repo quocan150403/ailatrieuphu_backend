@@ -1,0 +1,42 @@
+@baseUrl =  http://localhost:3000/api/users
+
+# User API
+
+# @name Getall
+GET {{baseUrl}} 
+
+###
+
+# @name GetbyId
+GET {{baseUrl}}/6455ceffc8d917d3615a4977
+
+###
+
+# @name Create
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+    "username": "quocan",
+    "email": "quocan@gmail.com",
+    "password": "123456"
+}
+
+###
+
+# @name Update
+PUT {{baseUrl}}/update/645f15b4983d09dc7ee3d4af
+Content-Type: application/json
+
+{
+    "username": "test",
+    "email": "an1@gmail.com",
+    "password": "123456"
+}
+
+###
+
+# @name Delete
+DELETE {{baseUrl}}/delete/645f15b4983d09dc7ee3d4af
+
+###

@@ -1,0 +1,38 @@
+@baseUrl =  http://localhost:3000/api/categories
+
+# User API
+
+# @name Getall
+GET {{baseUrl}} 
+
+###
+
+# @name GetbyId
+GET {{baseUrl}}/6455ceffc8d917d3615a4977
+
+###
+
+# @name Create
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+    "title": ""
+}
+
+###
+
+# @name Update
+PUT {{baseUrl}}/update/645f2275d06e2c2249ebfd19
+Content-Type: application/json
+
+{
+   "title": "Danh sách kết hợp"
+}
+
+###
+
+# @name Delete
+DELETE {{baseUrl}}/delete/645f222ab6765148f6374ed9
+
+###
