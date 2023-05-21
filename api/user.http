@@ -18,25 +18,25 @@ Content-Type: application/json
 
 {
     "username": "quocan",
-    "email": "quocan@gmail.com",
+    "phone": "0123456789",
     "password": "123456"
 }
 
 ###
 
 # @name Update
-PUT {{baseUrl}}/update/645f15b4983d09dc7ee3d4af
+PUT {{baseUrl}}/update/64699e87b100f22f73e06d89
 Content-Type: application/json
 
 {
-    "username": "test",
-    "email": "an1@gmail.com",
+    "username": "quocan",
+    "phone": "0123456789",
     "password": "123456"
 }
 
 ###
 
 # @name Delete
-DELETE {{baseUrl}}/delete/645f15b4983d09dc7ee3d4af
+DELETE {{baseUrl}}/delete/64688d78690f785ca3a1f2d8
 
 ###

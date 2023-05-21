@@ -8,7 +8,7 @@ GET {{baseUrl}}
 ###
 
 # @name GetbyId
-GET {{baseUrl}}/6455ceffc8d917d3615a4977
+GET {{baseUrl}}/64688848cdc1107fa4461943
 
 ###
 
@@ -17,22 +17,22 @@ POST {{baseUrl}}/store
 Content-Type: application/json
 
 {
-    "title": ""
+    "name": "Đồ văn phòng"
 }
 
 ###
 
 # @name Update
-PUT {{baseUrl}}/update/645f2275d06e2c2249ebfd19
+PUT {{baseUrl}}/update/64688cd6690f785ca3a1f2d6
 Content-Type: application/json
 
 {
-   "title": "Danh sách kết hợp"
+   "name": "Đồ văn phòng"
 }
 
 ###
 
 # @name Delete
-DELETE {{baseUrl}}/delete/645f222ab6765148f6374ed9
+DELETE {{baseUrl}}/delete/64688848cdc1107fa4461943
 
 ###
