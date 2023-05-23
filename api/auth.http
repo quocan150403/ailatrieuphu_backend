@@ -23,7 +23,9 @@ Content-Type: application/json
 }
 
 ###
-GET {{baseUrl}}/test
 
+GET {{baseUrl}}/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmIxZDg0MDRlZDM5YzA5OTE4MjgyZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg0ODMxNjkwLCJleHAiOjE2ODQ4MzE3NTB9.n-W6o3QDPtoJWJ6ccciGzK2E40EWJTx-w19KGxRAyHI
 ###
-GET {{baseUrl}}/test2
+
+POST {{baseUrl}}/refresh-token

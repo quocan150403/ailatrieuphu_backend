@@ -4,6 +4,28 @@ const jwt = require('jsonwebtoken');
 const UserModel = require('../models/user.model');
 
 class AuthController {
+  generateAccessToken(user) {
+    return jwt.sign(
+      {
+        id: user._id,
+        role: user.role,
+      },
+      process.env.TOKEN_SECRET,
+      { expiresIn: '60s' },
+    );
+  }
+
+  generateRefreshToken(user) {
+    return jwt.sign(
+      {
+        id: user._id,
+        role: user.role,
+      },
+      process.env.REFRESH_TOKEN_SECRET,
+      { expiresIn: '365d' },
+    );
+  }
+
   async register(req, res, next) {
     const { username, email, password, confirmPassword } = req.body;
 
@@ -40,7 +62,7 @@ class AuthController {
           role: user.role,
         },
         process.env.TOKEN_SECRET,
-        { expiresIn: '30s' },
+        { expiresIn: '60s' },
       );
 
       const refreshToken = jwt.sign(
@@ -63,6 +85,25 @@ class AuthController {
       res.status(200).json({ ...info, accessToken });
     } catch (error) {
       req.json;
+    }
+  }
+
+  async refreshToken(req, res, next) {
+    const refreshToken = req.cookies.refreshToken;
+    if (!refreshToken) return res.status(401).json('You are not authenticated');
+    try {
+      const verify = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
+      const accessToken = jwt.sign(
+        {
+          id: verify.id,
+          role: verify.role,
+        },
+        process.env.TOKEN_SECRET,
+        { expiresIn: '60s' },
+      );
+      res.status(200).json({ accessToken });
+    } catch (error) {
+      res.status(500).json(error);
     }
   }
 }
