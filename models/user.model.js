@@ -4,7 +4,7 @@ const User = new mongoose.Schema({
   role: { type: String, default: 'user' },
   username: { type: String, unique: true, required: true },
   password: { type: String, required: true },
-  phone: { type: String, unique: true, required: true },
+  email: { type: String, unique: true, required: true },
   urlAvatar: { type: String, default: '' },
   address: { type: String, default: '' },
   followers: { type: Array, default: [] },

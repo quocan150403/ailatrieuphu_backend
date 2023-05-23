@@ -1,16 +1,29 @@
 @baseUrl =  http://localhost:3000/api/auth
 
-# Auth API
+
 # @name Register
-POST http://localhost:3000/api/auth/register
+POST {{baseUrl}}/register
 Content-Type: application/json
 
 {
-  "username": "quocan",
-  "email": "quocan@gmail.com",
-  "password": 123456,
-  "confirmPassword": 12345
+    "username": "quocan",
+    "email": "quocan@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456"
 }
 
+###
+# @name Login 
+POST {{baseUrl}}/login
+Content-Type: application/json
 
+{
+    "username": "quocan",
+    "password": "123456"
+}
 
+###
+GET {{baseUrl}}/test
+
+###
+GET {{baseUrl}}/test2
