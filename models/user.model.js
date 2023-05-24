@@ -10,6 +10,8 @@ const User = new mongoose.Schema({
   followers: { type: Array, default: [] },
   following: { type: Array, default: [] },
   visible: { type: Boolean, default: true },
+  resetToken: { type: String, default: '' },
+  resetTokenExpiration: { type: Date, default: Date.now },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });

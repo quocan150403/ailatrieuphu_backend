@@ -25,7 +25,12 @@ Content-Type: application/json
 ###
 
 GET {{baseUrl}}/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmIxZDg0MDRlZDM5YzA5OTE4MjgyZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg0ODMxNjkwLCJleHAiOjE2ODQ4MzE3NTB9.n-W6o3QDPtoJWJ6ccciGzK2E40EWJTx-w19KGxRAyHI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmIxZDg0MDRlZDM5YzA5OTE4MjgyZiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg0OTEwNDg3LCJleHAiOjE2ODQ5MTA1NDd9.jn8m9DMOCb5IT18Gj3oCYz-8e094C_ARvq6EVyt4_e8
+
 ###
 
 POST {{baseUrl}}/refresh-token
+
+###
+
+GET {{baseUrl}}/logout
