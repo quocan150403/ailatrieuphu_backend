@@ -1,0 +1,42 @@
+@baseUrl =  http://localhost:3000/api/game
+
+# User API
+
+# @name Getall
+GET {{baseUrl}} 
+
+###
+
+# @name GetbyId
+GET {{baseUrl}}/64688848cdc1107fa4461943
+
+###
+
+# @name Create
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+"playerId":"64815f2d8573fcfc0484a2a9",
+"questions":["64815f2d8573fcfc0484a2a9"],
+"helps":[true,true,true,true],
+"totalTime": 100,
+"score": 100
+}
+
+###
+
+# @name Update
+PUT {{baseUrl}}/update/64815a8c406ba4bb3d4f388c
+Content-Type: application/json
+
+{
+   "name": "Công nghệ"
+}
+
+###
+
+# @name Delete
+DELETE {{baseUrl}}/delete/64688848cdc1107fa4461943
+
+###

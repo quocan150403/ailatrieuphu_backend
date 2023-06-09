@@ -1,0 +1,51 @@
+@baseUrl =  http://localhost:3000/api/questions
+
+# Product API
+
+# @name Getall
+GET {{baseUrl}} 
+
+###
+# @name GetByCategory
+GET {{baseUrl}}/get-by-type/64815a8c406ba4bb3d4f388
+
+
+###
+
+# @name GetbyId
+GET {{baseUrl}}/64688848cdc1107fa4461943
+
+###
+
+# @name Create
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+"content":"Trong JavaScript, giá trị của biểu thức true && 'abc' là gì?",
+"options":[
+  "true.",
+  "false.",
+  "undefined.",
+  "'abc'."
+],
+"correctOptionIndex":3,
+"level":3,
+"typeId":"6481b863e296977f8e158165"
+}
+
+###
+
+# @name Update
+PUT {{baseUrl}}/update/6469aabe96151524f40db0f9
+Content-Type: application/json
+
+{
+}
+
+###
+
+# @name Delete
+DELETE {{baseUrl}}/delete/6469aa281918ced8f0f1feec
+
+###

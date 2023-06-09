@@ -1,13 +1,17 @@
 const usersRouter = require('./users.route');
-const categoriesRouter = require('./categories.route');
-const productsRouter = require('./products.route');
+const questionsRouter = require('./questions.route');
+const typesRouter = require('./types.route');
 const authRouter = require('./auth.route');
+const gameRouter = require('./game.route');
+const awardsRouter = require('./awards.route');
 
 function route(app) {
   app.use('/api/auth', authRouter);
   app.use('/api/users', usersRouter);
-  app.use('/api/categories', categoriesRouter);
-  app.use('/api/products', productsRouter);
+  app.use('/api/questions', questionsRouter);
+  app.use('/api/types', typesRouter);
+  app.use('/api/game', gameRouter);
+  app.use('/api/awards', awardsRouter);
 }
 
 module.exports = route;

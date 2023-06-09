@@ -1,4 +1,4 @@
-@baseUrl =  http://localhost:3000/api/categories
+@baseUrl =  http://localhost:3000/api/awards
 
 # User API
 
@@ -17,17 +17,18 @@ POST {{baseUrl}}/store
 Content-Type: application/json
 
 {
-    "name": "Đồ văn phòng"
+   "position":14,
+   "amount":150000000
 }
 
 ###
 
 # @name Update
-PUT {{baseUrl}}/update/64688cd6690f785ca3a1f2d6
+PUT {{baseUrl}}/update/64815a8c406ba4bb3d4f388c
 Content-Type: application/json
 
 {
-   "name": "Đồ văn phòng"
+   "name": "Tổng hợp"
 }
 
 ###

@@ -18,7 +18,6 @@ Content-Type: application/json
 
 {
     "username": "quocan",
-    "phone": "0123456789",
     "password": "123456"
 }
 

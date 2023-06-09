@@ -1,0 +1,38 @@
+@baseUrl =  http://localhost:3000/api/types
+
+# User API
+
+# @name Getall
+GET {{baseUrl}} 
+
+###
+
+# @name GetbyId
+GET {{baseUrl}}/64688848cdc1107fa4461943
+
+###
+
+# @name Create
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+    "name": "Lập trình"
+}
+
+###
+
+# @name Update
+PUT {{baseUrl}}/update/64815a8c406ba4bb3d4f388c
+Content-Type: application/json
+
+{
+   "name": "Tổng hợp"
+}
+
+###
+
+# @name Delete
+DELETE {{baseUrl}}/delete/64688848cdc1107fa4461943
+
+###
